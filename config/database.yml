@@ -22,6 +22,7 @@ default: &default
   pool: 5
   username: postgres
   password: postgres
+  host: localhost
 
 development:
   <<: *default
@@ -82,4 +83,6 @@ test:
 #
 production:
   <<: *default
+  username: dev
+  password: postgres
   database: ods_engine_production
