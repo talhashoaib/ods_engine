@@ -139,7 +139,7 @@ class GetOdds
 			until @client.table(:class=>" table-main").exists? do 
 				sleep 1 
 				table_tries = table_tries + 1
-				if table_tries == 10
+				if table_tries >= 10
 					@client.goto url
 				end
 			end
