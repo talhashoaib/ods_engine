@@ -34,6 +34,8 @@ gem 'selenium-webdriver', '2.46.2'
 gem 'watir-webdriver'
 gem 'watir-scroll'
 
+gem "headless"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
