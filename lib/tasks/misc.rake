@@ -43,6 +43,7 @@ namespace :misc do
         puts "Getting Asian Handicaps for match #{count} of #{num_games}"
         mymatch["asian_handicap"] = ods.getAsianHandicaps(ah_url)
         puts mymatch.inspect
+        
       end
       
       # browser.close
