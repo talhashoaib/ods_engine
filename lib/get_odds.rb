@@ -41,7 +41,7 @@ class GetOdds
 
     # @driver = Selenium::WebDriver.for :remote, url: 'http://localhost:8001'
 
-    Selenium::WebDriver::PhantomJS.path = '/home/talha/projects/yallaposter-temp-repo/drivers/phantomjs/phantomjs-2.1.1-linux-x86_64/bin/phantomjs'
+    Selenium::WebDriver::PhantomJS.path = 'vendor/phantomjs/bin/phantomjs'
 	  capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs("phantomjs.page.settings.userAgent" => "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1468.0 Safari/537.36")
 	  driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
 	  @client  = Watir::Browser.new driver
