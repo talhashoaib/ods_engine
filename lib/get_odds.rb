@@ -134,7 +134,6 @@ class GetOdds
 			puts "Getting page from: \n#{url}\n"
 			@client.goto url
 
-			# debugger
 			
 			puts "Waiting for page content to load..."
 			until @client.table(:class=>" table-main").exists? do sleep 1 end
@@ -172,9 +171,9 @@ class GetOdds
 		num_games = String(rows.length)
 		puts "#{num_games} games found."
 	  
-	  if rows.length > 200
-	    rows = rows.first(5)
-	    puts "Getting 5 games"
+	  if rows.length > 250
+	    rows = rows.first(250)
+	    puts "Getting 250 games"
 	  end
 	  
 		matches = rows.collect do |row|
