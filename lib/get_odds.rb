@@ -134,9 +134,15 @@ class GetOdds
 			puts "Getting page from: \n#{url}\n"
 			@client.goto url
 
-			
+			table_tries = 0
 			puts "Waiting for page content to load..."
-			until @client.table(:class=>" table-main").exists? do sleep 1 end
+			until @client.table(:class=>" table-main").exists? do 
+				sleep 1 
+				table_tries = table_tries + 1
+				if table_tries == 10
+					@client.goto url
+				end
+			end
 			## Checks every second to see if the page to see if the element has been loaded in
 			
 		rescue Exception => e
