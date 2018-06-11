@@ -12,11 +12,11 @@ class HomeController < ApplicationController
   		engine.started = true
   	end
   	engine.save
-  	redirect_to :back
+  	redirect_to root_path
   end
 
   def start_sync
-  	system('rake misc:fetch_details RAILS_ENV=production')
-  	redirect_to :back
+  	system('rake misc:manual_fetch_details RAILS_ENV=production &')
+  	redirect_to root_path
   end
 end
