@@ -17,15 +17,11 @@
         <img alt="image" height="40" src="https://editor-latest.s3.amazonaws.com/design-blocks/block_images/img_round.svg">
         <h1>Ods Engine</h1>
         <p class="text-h3">Default Scheduled Sync Occurs daily at 1 AM GMT. 
-        	
-
         	<%= link_to "#{@engine.started? ? 'Stop' : 'Start'}", toggle_engine_path, class: "btn #{ @engine.started? ? 'btn-danger' : 'btn-success' }" %>
-
-
         </p>
         
         <p class="text-h5">
-        	<button class="btn btn-warning form-control" type="button">Start Manual Sync</button>
+        	<%= link_to "Start Manual Sync", engine_sync_path, class: "btn btn-warning form-control" %>
         </p>
       </div>
     </div>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get '/toggle/engine' => 'home#toggle', as: :toggle_engine
+  get '/engine/manual_sync' => 'home#start_sync', as: :engine_sync
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -14,4 +14,9 @@ class HomeController < ApplicationController
   	engine.save
   	redirect_to :back
   end
+
+  def start_sync
+  	system('rake misc:fetch_details RAILS_ENV=production')
+  	redirect_to :back
+  end
 end
