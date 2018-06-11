@@ -100,6 +100,9 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     ntlm-http (0.1.1)
+    passenger (5.3.1)
+      rack
+      rake (>= 0.8.1)
     pg (0.21.0)
     rack (1.6.10)
     rack-protection (1.5.5)
@@ -215,6 +218,7 @@ DEPENDENCIES
   jquery-rails
   mechanize
   nokogiri
+  passenger
   pg (~> 0.15)
   rails (= 4.2.6)
   resque
