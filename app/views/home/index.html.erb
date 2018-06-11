@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= stylesheet_link_tag    'main.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+
+<section class="fdb-block bg-gray" data-block-type="forms" data-id="1" draggable="true">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12  col-md-10 col-lg-8 col-xl-6 text-center">
+        <img alt="image" height="40" src="https://editor-latest.s3.amazonaws.com/design-blocks/block_images/img_round.svg">
+        <h1>Ods Engine</h1>
+        <p class="text-h3">Default Scheduled Sync Occurs daily at 1 AM GMT. 
+        	
+
+        	<%= link_to "#{@engine.started? ? 'Stop' : 'Start'}", toggle_engine_path, class: "btn #{ @engine.started? ? 'btn-danger' : 'btn-success' }" %>
+
+
+        </p>
+        
+        <p class="text-h5">
+        	<button class="btn btn-warning form-control" type="button">Start Manual Sync</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    
+    
+</body>
+</html>

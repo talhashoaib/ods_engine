@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180609180526) do
+ActiveRecord::Schema.define(version: 20180611155707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 20180609180526) do
   end
 
   add_index "asian_handicaps", ["odd_match_id"], name: "index_asian_handicaps_on_odd_match_id", using: :btree
+
+  create_table "engine_states", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "started"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "odd_matches", force: :cascade do |t|
     t.string   "odd_id"
