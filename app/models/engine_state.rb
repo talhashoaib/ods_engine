@@ -82,6 +82,10 @@ class EngineState < ActiveRecord::Base
       # writeToFile(filename,'w',matches.to_json)
       # puts matches.inspect
     end
+
+    sync_state = EngineState.find_by_name('sync')
+    sync_state.started = false
+    sync_state.save
     
 	end
 end

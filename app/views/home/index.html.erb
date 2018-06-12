@@ -23,6 +23,9 @@
         <p class="text-h5">
         	<%= link_to "Start Manual Sync", engine_sync_path, class: "btn btn-warning form-control" %>
         </p>
+        <p class="text-h5">
+          <%= @sync_state.started? ? 'Syncing in process...' : 'Syncing has completed successfully/No sync is in process.' %>
+        </p>
       </div>
     </div>
   </div>
